@@ -5,7 +5,7 @@ RUN usermod -g 100 nobody
 RUN usermod -d /home nobody
 RUN usermod -a -G users www-data
 RUN chown -R nobody:users /home
-RUN echo "Asia/Shanghai" | tee /etc/timezone
+RUN echo "Etc/UTC" | tee /etc/timezone
 RUN apt-get update -q && apt-get install -qy \
     apache2 \
     php \
